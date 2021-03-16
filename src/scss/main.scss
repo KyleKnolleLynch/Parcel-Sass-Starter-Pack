@@ -1,0 +1,9 @@
+$bg-dark: #222;
+$text-hotpink: hotpink;
+
+body {
+  background: $bg-dark;
+  color: $text-hotpink;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
