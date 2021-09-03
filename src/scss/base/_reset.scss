@@ -1,0 +1,28 @@
+@use '../abstracts' as a;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+section {
+  padding-block: min(10vh, 10rem);
+}
+
+img {
+  display: block;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px dotted a.$secondary;
+  margin: a.$base-margin; 
+}

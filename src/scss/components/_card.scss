@@ -1,0 +1,19 @@
+@use '../abstracts';
+@use '../utilities';
+
+
+.card {
+  font-size: abstracts.$base-font-size;
+  color: abstracts.$secondary;
+  max-width: 40rem;
+  background: #333;
+  padding: 1em;
+  border-radius: 0.5rem;
+
+  .card-title {
+    font-size: abstracts.$font-size-md;
+    margin-bottom: 8px;
+  }
+}
+
+

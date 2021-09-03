@@ -1,9 +1,22 @@
-$bg-dark: #222;
-$text-hotpink: hotpink;
+@use 'abstracts' as a;
+@use 'base' as b;
+@use 'utilities' as u;
+@use 'components' as c;
+@use 'layouts' as l;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: a.$font-openSans;
+}
+
+html,
+body {
+  font-size: a.$base-font-size;
+}
 
 body {
-  background: $bg-dark;
-  color: $text-hotpink;
+  @include a.dc(a.$bg-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

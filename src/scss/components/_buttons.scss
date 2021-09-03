@@ -1,0 +1,25 @@
+@use '../abstracts' as a;
+
+.btn {
+  @include a.btn;
+}
+
+@each $key, $val in a.$colors {
+  .btn-#{$key} {
+    @include a.btn($val);
+    color: a.text-clr($val);
+    &:hover {
+      background-color: lighten($val, 10);
+    }
+  }
+
+  .btn-outlined-#{$key} {
+    @include a.btn(rgba(0, 0, 0, 0));
+    border: a.$base-border-thickness solid $val;
+    color: $val;
+    &:hover {
+      background-color: $val;
+      color: #fff;
+    }
+  }
+}
