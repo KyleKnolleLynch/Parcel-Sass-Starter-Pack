@@ -1,8 +1,16 @@
+@use 'colors' as c;
+
 //  Dynamic text color
-@function text-clr($color) {
+@function dyna-clr($color) {
   @if (lightness($color) > 51) {
     @return #000;
   } @else {
     @return #fff;
   }
+}
+
+//  Color selector function
+@function clr($base, $shade: 500) {
+ $color: map-get(map-get(c.$colors, $base), $shade);
+ @return $color;
 }

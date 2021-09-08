@@ -21,8 +21,12 @@ img {
   display: block;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 hr {
   border: 0;
   border-bottom: 1px dotted a.$secondary;
-  margin: a.$base-margin; 
 }
