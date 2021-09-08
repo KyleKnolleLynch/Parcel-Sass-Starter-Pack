@@ -1,11 +1,22 @@
 @use '../abstracts' as a;
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: a.$font-openSans;
+}
+
+html,
+body {
+  font-size: a.$base-font-size;
 }
 
 body {
   min-height: 100vh;
+  @include a.dc(a.$bg-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul[role='list'],

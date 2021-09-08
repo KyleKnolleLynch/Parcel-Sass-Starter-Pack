@@ -41,7 +41,7 @@
       color: $v;
       &:hover {
         background-color: $v;
-        color: #fff;
+        color: a.dyna-clr($v);
       }
     }
   }
