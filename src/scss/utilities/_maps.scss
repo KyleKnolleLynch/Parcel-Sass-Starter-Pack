@@ -27,6 +27,11 @@
     .bg-#{$key}-#{$k} {
       background-color: $v;
     }
+    .text-hover-#{$key}-#{$k} {
+      &:hover {
+        color: $v;
+      }
+    }
   }
 }
 
