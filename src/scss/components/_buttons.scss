@@ -4,27 +4,7 @@
   @include a.btn;
 }
 
-// @each $key, $val in a.$colors {
-//   .btn-#{$key} {
-//    color: a.dyna-clr($val);
-//     &:hover {
-//       background-color: lighten($val, 10);
-//     }
-//   }   @include a.btn($val);
-
-//   .btn-outlined-#{$key} {
-//     @include a.btn(rgba(0, 0, 0, 0));
-//     border: a.$base-border-thickness solid $val;
-//     color: $val;
-//     &:hover {
-//       background-color: $val;
-//       color: #fff;
-//     }
-//   }
-// }
-
 @each $key, $val in a.$colors {
- 
   @each $k, $v in $val {
     .btn-#{$key}-#{$k} {
       color: a.dyna-clr($v);
@@ -33,7 +13,6 @@
       }
       @include a.btn($v);
     }
-   
 
     .btn-outlined-#{$key}-#{$k} {
       @include a.btn(rgba(0, 0, 0, 0));

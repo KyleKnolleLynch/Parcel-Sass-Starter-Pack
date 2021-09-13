@@ -1,8 +1,10 @@
 @use 'functions' as f;
 @use 'variables' as v;
+@use '../utilities/breakpoints' as b;
 
 // Button styles
 @mixin btn($btn-bg-color: #e2e2e2) {
+  font-size: var(--fs-300);
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -20,6 +22,7 @@
 
 //  Labels - error, notification, warning
 @mixin label($color) {
+  font-size: var(--fs-300);
   text-align: center;
   display: inline-block;
   margin: v.$base-margin;
@@ -29,4 +32,17 @@
   border-radius: v.$base-border-radius;
 }
 
+//  Media queries
+@mixin mq($key) {
+  $size: map-get(b.$breakpoints, $key);
 
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin custom-mq($bp: 0) {
+  @media only screen and (min-width: $bp) {
+    @content;
+  }
+}

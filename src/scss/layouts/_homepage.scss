@@ -1,1 +1,15 @@
+@use '../abstracts' as a;
 
+//  Site-wide styles
+body {
+  @include a.dc(a.$bg-dark);
+}
+
+section {
+  padding-block: min(10vh, 10rem);
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px dotted a.$secondary;
+}
